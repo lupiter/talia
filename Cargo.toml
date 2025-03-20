@@ -1,0 +1,21 @@
+[package]
+name = "talia"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gb-rs = "0.1.0"
+gba = "0.1.0"
+
+[build-dependencies]
+gb-tools = "0.1.0"
+image = "0.24"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[[bin]]
+name = "talia"
+path = "src/main.rs" 
